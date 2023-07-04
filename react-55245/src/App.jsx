@@ -1,14 +1,15 @@
-import { NavBar } from './componentes/NavBar'
-import { ItemListContainer } from "/componentes/ItemListContainer"
-import './App.css'
+import "./App.css"  
+import { Header } from "./componentes/Header/Header.jsx"
+import { NavBar } from './componentes/NavBar/NavBar.jsx'
+
 
 function App() {
-
+  
   return (
-    <>
-      <NavBar />
-      <ItemListContainer />
-    </>
+   <div>
+      <Header/>
+      <NavBar/> 
+   </div>
   )
 }
 
