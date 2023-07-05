@@ -1,0 +1,14 @@
+.img_producto{
+    max-width: 15rem;
+}
+
+.carta_producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    background-color: rgb(196, 196, 196);
+    max-width: fit-content;
+    padding: 1rem;
+    border-radius: 10px;
+}
