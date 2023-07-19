@@ -6,7 +6,7 @@ const ItemList = ({itemList}) =>{
     return(
         <div className="row">
                     {
-                        itemList.map((item) => <PokemonItemCard key={item.name} url={item.url}/>)
+                        itemList && itemList.map((item) => (<PokemonItemCard key={item.name} url={item.url}/>))
                     }
         </div>
     )

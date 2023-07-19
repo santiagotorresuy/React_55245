@@ -13,7 +13,7 @@ export const PokemonItemCard = ({url}) =>{
 
 
     return(
-        <div className="col w-auto">
+        <div className="col-3 justify-content-center mb-4">
             {   
                 pokeItem && 
                     <>
@@ -25,7 +25,7 @@ export const PokemonItemCard = ({url}) =>{
 
             <div className="container_contador">
                 <button className="btn btn-primary">-</button>
-                <input className="container__contador__input" type="text" />
+                <input className="container__contador__input w-25" type="text" />
                 <button className="btn btn-primary">+</button>
             </div>
         </div>
