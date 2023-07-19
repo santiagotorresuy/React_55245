@@ -1,10 +1,10 @@
-import "./NavBar.css"
+import "./NavBar.scss"
 
 export const NavBar = (props) => {
 
     return(
-        <div className="contenedor_lista">
-            <ul className="lista_categorias">
+        <div className="navbar__container">
+            <ul className="navbar__container__list">
                 <li><a href="">Celulares</a></li>
                 <li><a href="">Laptops</a></li>
                 <li><a href="">Equipos Armados</a></li>
