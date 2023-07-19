@@ -1,11 +1,12 @@
 import "./Header.scss"
+import { Title } from "../Title/Title"
 
 export const Header = () =>{
     return(
         <header className="header">
-            <h1>TITLE</h1>
+            <Title/>
             <form action="" className="header__form">
-                <input type="text" />
+                <input type="text" className="header__form__input"/>
                 <button type="submit">Buscar</button>
             </form>
             <img src="./cart.png" alt="" className="header__cart"/>

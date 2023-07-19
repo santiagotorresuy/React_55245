@@ -2,11 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
+    gap: 10rem;
+    padding-block: 26px;
    
     .header__form{
         display: flex;
         gap: 1rem;
+
+        .header__form__input{
+            width: 20rem;
+        }
     }
     
     .header__cart{

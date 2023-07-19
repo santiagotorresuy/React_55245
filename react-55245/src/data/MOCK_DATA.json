@@ -1,0 +1,104 @@
+[
+      {
+        "id": 1,
+        "marca": "Dell",
+        "modelo": "Inspiron 15",
+        "procesador": "Intel Core i5",
+        "ram": "8GB",
+        "almacenamiento": "256GB SSD",
+        "precio": 799,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 2,
+        "marca": "HP",
+        "modelo": "Pavilion x360",
+        "procesador": "AMD Ryzen 7",
+        "ram": "16GB",
+        "almacenamiento": "512GB SSD",
+        "precio": 899,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 3,
+        "marca": "Apple",
+        "modelo": "MacBook Air",
+        "procesador": "Apple M1",
+        "ram": "8GB",
+        "almacenamiento": "256GB SSD",
+        "precio": 1099,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 4,
+        "marca": "Lenovo",
+        "modelo": "ThinkPad X1 Carbon",
+        "procesador": "Intel Core i7",
+        "ram": "16GB",
+        "almacenamiento": "512GB SSD",
+        "precio": 1299,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 5,
+        "marca": "Asus",
+        "modelo": "ROG Zephyrus G14",
+        "procesador": "AMD Ryzen 9",
+        "ram": "32GB",
+        "almacenamiento": "1TB SSD",
+        "precio": 1499,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 6,
+        "marca": "Acer",
+        "modelo": "Predator Helios 300",
+        "procesador": "Intel Core i7",
+        "ram": "16GB",
+        "almacenamiento": "1TB SSD",
+        "precio": 1199,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 7,
+        "marca": "Microsoft",
+        "modelo": "Surface Laptop 4",
+        "procesador": "AMD Ryzen 5",
+        "ram": "8GB",
+        "almacenamiento": "256GB SSD",
+        "precio": 999,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 8,
+        "marca": "Samsung",
+        "modelo": "Galaxy Book Pro",
+        "procesador": "Intel Core i7",
+        "ram": "16GB",
+        "almacenamiento": "512GB SSD",
+        "precio": 1399,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 9,
+        "marca": "MSI",
+        "modelo": "GS66 Stealth",
+        "procesador": "Intel Core i9",
+        "ram": "64GB",
+        "almacenamiento": "2TB SSD",
+        "precio": 1999,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      },
+      {
+        "id": 10,
+        "marca": "Razer",
+        "modelo": "Blade 15",
+        "procesador": "Intel Core i7",
+        "ram": "16GB",
+        "almacenamiento": "512GB SSD",
+        "precio": 1699,
+        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
+      }
+]
+  
+  

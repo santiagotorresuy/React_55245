@@ -2,9 +2,8 @@ import "./styles/styles.scss"
 import "./App.css"
 import { Header } from "./componentes/Header/Header.jsx"
 import { NavBar } from './componentes/NavBar/NavBar.jsx'
-import { Producto } from "./componentes/ItemListContainer/ItemListContainer.jsx"
+import { ItemListContainer } from "./componentes/ItemListContainer/ItemListContainer.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   
@@ -12,7 +11,7 @@ function App() {
    <div>
       <Header/> 
       <NavBar/> 
-      <Producto nombre="Lenovo IdealPad" precio={200} stock={3}/>
+      <ItemListContainer/>
    </div>
   )
 }
