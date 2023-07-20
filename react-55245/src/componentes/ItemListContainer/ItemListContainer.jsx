@@ -5,6 +5,7 @@ import "./ItemListContainer.scss"
 import { useEffect, useState } from "react"
 import { PokemonItemCard }  from "../PokemonItemCard/PokemonItemCard";
 import { useParams } from "react-router-dom"
+import  useFetch  from "../../hooks/useFetch";
 
 
 export const ItemListContainer = () =>{
@@ -12,12 +13,26 @@ export const ItemListContainer = () =>{
     const [retry, setRetry] = useState(0)
     const [url, setUrl] = useState(`https://pokeapi.co/api/v2/item`)
     
+    const { categoryId } = useParams();
+
+
+    /*const url = `https://pokeapi.co/api/v2/item-category/${categoryId}/`
+
+    const { list, pagination, loading, error } = useFetch(url, categoryId)
+
+    if (loading) {
+        return <div>Loading...</div>;
+      }
+    
+      if (error) {
+        return <div>Error: {error.message}</div>;
+      }*/
+    
     const [pagination, setPagination] = useState({
         next: null,
         previous: null
     })
 
-    const { categoryId } = useParams();
 
     useEffect(() =>{
         let urlFilter;
