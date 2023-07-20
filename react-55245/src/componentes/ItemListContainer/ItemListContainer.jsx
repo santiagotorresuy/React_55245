@@ -1,3 +1,4 @@
+//import { pedirDatos }  from "../../helpers/pedirDatos";
 //import ItemList from "../ItemList/ItemList";
 
 import "./ItemListContainer.scss"
@@ -16,11 +17,28 @@ export const ItemListContainer = () =>{
 
     const { categoryId } = useParams();
 
+    useEffect(() =>{
+        let urlFilter;
 
-    useEffect(() => {
-        fetchItemsFiltrados(url, categoryId)
-    }, [url, categoryId]);
+        if(categoryId){
+            urlFilter =  `https://pokeapi.co/api/v2/item-category/${categoryId}/`
+        }else{
+            urlFilter = url
+        }
+
+        fetch(urlFilter)
+            .then((response) => response.json())
+            .then((data) => {
+                setList(data.items || data.results)
+
+                setPagination({
+                    next: data.next,
+                    previous: data.previous
+                })
+            })
+    }, [url, categoryId])
     
+    /*
     const fetchItemsFiltrados = (url, categoryId) => {
         let apiUrl = url;
 
@@ -37,22 +55,10 @@ export const ItemListContainer = () =>{
               previous: data.previous,
             });
           });
-    };
+    };*/
 
-    /*
-    useEffect(() =>{
-        fetch(url)
-            .then((response) => response.json())
-            .then((data) => {
-                setList(data.results)
-
-                setPagination({
-                    next: data.next,
-                    previous: data.previous
-                })
-            })
-    }, [url])
-    */
+    
+    
 
     const handleNext = () =>{
         pagination.next && setUrl(pagination.next)
