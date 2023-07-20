@@ -9,11 +9,13 @@ import { useParams } from "react-router-dom"
 
 export const ItemListContainer = () =>{
     const [itemList, setList] = useState([])
+    const [retry, setRetry] = useState(0)
+    const [url, setUrl] = useState(`https://pokeapi.co/api/v2/item`)
+    
     const [pagination, setPagination] = useState({
         next: null,
         previous: null
     })
-    const [url, setUrl] = useState(`https://pokeapi.co/api/v2/item`)
 
     const { categoryId } = useParams();
 
@@ -36,10 +38,17 @@ export const ItemListContainer = () =>{
                     previous: data.previous
                 })
             })
-    }, [url, categoryId])
+    }, [url, categoryId, retry])
+
+    useEffect(() =>{
+        const i = setInterval (() =>{
+            setRetry(v => v+1)
+        }, 10000)
+
+        return () => clearInterval(i)
+    }, [])
     
-    /*
-    const fetchItemsFiltrados = (url, categoryId) => {
+    /*const fetchItemsFiltrados = (url, categoryId) => {
         let apiUrl = url;
 
         if (categoryId) {
@@ -56,9 +65,6 @@ export const ItemListContainer = () =>{
             });
           });
     };*/
-
-    
-    
 
     const handleNext = () =>{
         pagination.next && setUrl(pagination.next)

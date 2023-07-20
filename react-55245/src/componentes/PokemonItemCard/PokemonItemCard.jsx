@@ -20,7 +20,6 @@ export const PokemonItemCard = ({url}) =>{
                         <h4 className="item__name">{pokeItem.name}</h4>
                         <img className="item_img" src={pokeItem.sprites.default} alt={pokeItem.name}/>
                         <p>Precio: {pokeItem.cost}$</p>
-                        <p>Categoria: {pokeItem.category.name}</p>
                     </>
             }
 
