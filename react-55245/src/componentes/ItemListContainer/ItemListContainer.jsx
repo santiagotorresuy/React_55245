@@ -1,4 +1,3 @@
-//import { pedirDatos }  from "../../helpers/pedirDatos";
 //import ItemList from "../ItemList/ItemList";
 
 import "./ItemListContainer.scss"
@@ -15,19 +14,37 @@ export const ItemListContainer = () =>{
     })
     const [url, setUrl] = useState(`https://pokeapi.co/api/v2/item`)
 
-    //const { categoryId } = useParams()
+    const { categoryId } = useParams();
 
+
+    useEffect(() => {
+        fetchItemsFiltrados(url, categoryId)
+    }, [url, categoryId]);
+    
+    const fetchItemsFiltrados = (url, categoryId) => {
+        let apiUrl = url;
+
+        if (categoryId) {
+          apiUrl = `https://pokeapi.co/api/v2/item-category/${categoryId}/`;
+        }
+    
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            setList(data.items || data.results);
+            setPagination({
+              next: data.next,
+              previous: data.previous,
+            });
+          });
+    };
+
+    /*
     useEffect(() =>{
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
                 setList(data.results)
-
-                /*if(categoryId){
-                    setList(data.result.find(item => item.category.name === categoryId))
-                }else{
-                    setList(data.results)
-                }*/
 
                 setPagination({
                     next: data.next,
@@ -35,6 +52,7 @@ export const ItemListContainer = () =>{
                 })
             })
     }, [url])
+    */
 
     const handleNext = () =>{
         pagination.next && setUrl(pagination.next)
@@ -56,7 +74,7 @@ export const ItemListContainer = () =>{
                 }
 
             </div>
-            <div className="row justify-content-between">
+            <div className="row justify-content-between mb-5">
                 <button onClick={handlePrevious} className="btn btn-primary col-2">Previous</button>
                 <button onClick={handleNext} className="btn btn-primary col-2 ">Next</button>
             </div>
@@ -64,16 +82,4 @@ export const ItemListContainer = () =>{
     )
 }
 
-/*const [productos, setProducts] = useState([]);
 
-useEffect(() => {
-    pedirDatos()
-        .then((result) => setProducts(result))
-        .catch((error) => console.log(error))
-}, [])
-
-return(
-    <div className="container_ItemList">
-         <ItemList productos={productos}/>
-     </div>    
-)*/
