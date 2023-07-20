@@ -4,6 +4,7 @@
 import "./ItemListContainer.scss"
 import { useEffect, useState } from "react"
 import { PokemonItemCard }  from "../PokemonItemCard/PokemonItemCard";
+import { useParams } from "react-router-dom"
 
 
 export const ItemListContainer = () =>{
@@ -14,18 +15,26 @@ export const ItemListContainer = () =>{
     })
     const [url, setUrl] = useState(`https://pokeapi.co/api/v2/item`)
 
+    //const { categoryId } = useParams()
+
     useEffect(() =>{
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
                 setList(data.results)
+
+                /*if(categoryId){
+                    setList(data.result.find(item => item.category.name === categoryId))
+                }else{
+                    setList(data.results)
+                }*/
+
                 setPagination({
                     next: data.next,
                     previous: data.previous
                 })
             })
     }, [url])
-    //`https://pokeapi.co/api/v2/item`
 
     const handleNext = () =>{
         pagination.next && setUrl(pagination.next)
