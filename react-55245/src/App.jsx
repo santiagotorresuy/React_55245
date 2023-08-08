@@ -1,11 +1,13 @@
 import "./styles/styles.scss"  
 import "./App.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+
 import { Header } from "./componentes/Header/Header.jsx"
 import { NavBar } from './componentes/NavBar/NavBar.jsx'
 import { ItemListContainer } from "./componentes/ItemListContainer/ItemListContainer.jsx"
 import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetailContainer"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 function App() {
   
@@ -21,8 +23,6 @@ function App() {
         <Route path="/item/:id" element= {<ItemDetailContainer/>}/>
         <Route path="*" element={ <Navigate to="/"/> }/>
       </Routes>
-
-      
 
    </BrowserRouter>
   )

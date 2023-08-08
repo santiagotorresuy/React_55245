@@ -1,14 +1,15 @@
-//import { Item } from "../Item/Item"
-import { PokemonItemCard } from "../PokemonItemCard/PokemonItemCard"
+import "./ItemList.scss"
+import { ItemCard } from "../ItemCard/ItemCard"
 
 
 const ItemList = ({itemList}) =>{
     return(
         <div className="row">
                     {
-                        itemList && itemList.map((item) => (<PokemonItemCard key={item.name} url={item.url}/>))
+                       itemList && itemList.map((item) => (<ItemCard key={item.name} url={item.url}/>))
                     }
         </div>
+
     )
 }
 

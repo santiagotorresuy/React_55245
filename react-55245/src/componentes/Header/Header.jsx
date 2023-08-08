@@ -9,7 +9,7 @@ export const Header = () =>{
                 <input type="text" className="header__form__input"/>
                 <button type="submit">Buscar</button>
             </form>
-            <img src="./cart.png" alt="" className="header__cart"/>
+            <p>cart</p>
         </header>
     )
 }
