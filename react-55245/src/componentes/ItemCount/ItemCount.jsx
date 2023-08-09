@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 const ItemCount = ({ quantity, item, setQuantity }) =>{
-    const { addCart, isInCart, setCartIcon } = useContext(CartContext)
+    const { addCart, isInCart, setCartIndicator } = useContext(CartContext)
 
 
     const handleAdd = () =>{
@@ -22,7 +22,7 @@ const ItemCount = ({ quantity, item, setQuantity }) =>{
         }
 
         addCart(newItem)
-        setCartIcon("header__cart__indicator--on")
+        setCartIndicator("header__cart__indicator--on")
     }
 
     return(

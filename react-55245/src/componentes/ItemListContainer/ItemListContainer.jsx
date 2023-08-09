@@ -56,7 +56,7 @@ export const ItemListContainer = () =>{
 
 
     return(
-        <div className="container item__list__container w-75 mt-5">
+        <div className="container item__list__container mt-5">
             <h2 className="mb-4">PokeItems</h2>
             <hr />
             

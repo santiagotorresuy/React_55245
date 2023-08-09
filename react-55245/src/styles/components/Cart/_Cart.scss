@@ -1,0 +1,46 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__h2{
+        display: flex;
+        align-self: center;
+        width: $mW-1100;
+    }
+
+    &__table{
+        align-self: center;
+        max-width: $mW-1100;
+
+        &__remove{
+            border: none;
+            background-color: white;
+        }
+    }
+
+    &__buyDelete{
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        margin-bottom: 15px;
+        width: $mW-1100;
+
+        &-buy{
+            border: none;
+            color: white;
+            background-color: $navbarLink--color;
+            border-radius: 5px;
+            padding: 5px;
+        }    
+        
+        &-delete{
+            border: none;
+            color: white;
+            background-color: $navbarLink--color;
+            border-radius: 5px;
+            padding: 5px;
+        }          
+    }
+
+}
