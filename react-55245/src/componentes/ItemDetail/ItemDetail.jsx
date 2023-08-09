@@ -1,6 +1,5 @@
-import "./ItemDetail.scss"
 import { useState, useEffect } from "react"
-import { ItemCount } from "../ItemCount/ItemCount"
+import  ItemCount  from "../ItemCount/ItemCount"
 
 export const ItemDetail = ({url}) =>{
     const [ quantity, setQuantity ] = useState(1)
@@ -12,7 +11,8 @@ export const ItemDetail = ({url}) =>{
             .then((data) => {
                 setItem(data)
             })
-    }, [url])
+            .catch((err) => console.log(err))
+    }, [url]) 
 
     return(
         <div className="item__detail">
@@ -24,14 +24,13 @@ export const ItemDetail = ({url}) =>{
                             <h3 className="item__details__name">{item.name}</h3>
                             <p className="item__details__description">Descripcion: "{item.flavor_text_entries[0].text}"</p>
                             <p>Precio: ${item.cost}</p> 
-                            
+
                             <ItemCount
                                 item={item}
                                 quantity={quantity}
                                 setQuantity={setQuantity}
                             />    
                         </div>
-                        
                     </>
             }                           
         </div>

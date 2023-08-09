@@ -13,9 +13,9 @@ export const ItemCard = ({url}) =>{
     }, [])
 
     return(
-        <div className="item__list col-3">
+        <div className="item__card">
             {   
-                item && <Item item={item}/>
+                item && <Item item={item} url={url}/>
             }
         </div>
     )

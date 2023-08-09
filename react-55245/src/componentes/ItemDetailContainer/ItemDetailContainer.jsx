@@ -1,4 +1,3 @@
-import "./ItemDetailContainer.scss"
 import { useEffect, useState } from "react"
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
@@ -6,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () =>{
     const [item, setItem] = useState(null)
-    const {itemId} = useParams();
+    const { itemId } = useParams();
     
     useEffect(() =>{
         fetch(`https://pokeapi.co/api/v2/item`)
@@ -15,6 +14,7 @@ export const ItemDetailContainer = () =>{
                 setItem(data.results.find((item) => item.url === `https://pokeapi.co/api/v2/item/${itemId}/`))
             })
         }, [itemId])
+
 
     return(
         <div className="container item__detail__container">

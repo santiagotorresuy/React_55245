@@ -1,10 +1,7 @@
-import "./ItemListContainer.scss"
-
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 import ItemList from "../ItemList/ItemList";
-
 
 export const ItemListContainer = () =>{
     const [itemList, setList] = useState([])
@@ -59,13 +56,12 @@ export const ItemListContainer = () =>{
 
 
     return(
-        <div className="container w-75 mt-4">
+        <div className="container item__list__container w-75 mt-5">
             <h2 className="mb-4">PokeItems</h2>
             <hr />
             
             <ItemList 
                 itemList={itemList}
-                
             />
 
             <div className="row justify-content-between mb-5">
