@@ -1,16 +1,20 @@
-.product__card{
+.product__card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    width: 220px;
-    padding: 1rem;
+    width: 300px;
+    height: 352px;
+    padding: 1rem; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background-color: rgba(196, 196, 196, 0.622);
+    background-color: white;
 
     &__name{
-        font-size: 25px;
+        font-size: 18px;
+        font-weight: 700;
     }
 
     &__category{
@@ -19,6 +23,6 @@
     }
 
     &__img{
-        padding: 12px;
+        width: 200px;
     }
 }

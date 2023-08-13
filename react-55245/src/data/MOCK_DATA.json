@@ -1,104 +1,455 @@
 [
-      {
-        "id": 1,
-        "marca": "Dell",
-        "modelo": "Inspiron 15",
-        "procesador": "Intel Core i5",
-        "ram": "8GB",
-        "almacenamiento": "256GB SSD",
-        "precio": 799,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 2,
-        "marca": "HP",
-        "modelo": "Pavilion x360",
-        "procesador": "AMD Ryzen 7",
-        "ram": "16GB",
-        "almacenamiento": "512GB SSD",
-        "precio": 899,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 3,
-        "marca": "Apple",
-        "modelo": "MacBook Air",
-        "procesador": "Apple M1",
-        "ram": "8GB",
-        "almacenamiento": "256GB SSD",
-        "precio": 1099,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 4,
-        "marca": "Lenovo",
-        "modelo": "ThinkPad X1 Carbon",
-        "procesador": "Intel Core i7",
-        "ram": "16GB",
-        "almacenamiento": "512GB SSD",
-        "precio": 1299,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 5,
-        "marca": "Asus",
-        "modelo": "ROG Zephyrus G14",
-        "procesador": "AMD Ryzen 9",
-        "ram": "32GB",
-        "almacenamiento": "1TB SSD",
-        "precio": 1499,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 6,
-        "marca": "Acer",
-        "modelo": "Predator Helios 300",
-        "procesador": "Intel Core i7",
-        "ram": "16GB",
-        "almacenamiento": "1TB SSD",
-        "precio": 1199,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 7,
-        "marca": "Microsoft",
-        "modelo": "Surface Laptop 4",
-        "procesador": "AMD Ryzen 5",
-        "ram": "8GB",
-        "almacenamiento": "256GB SSD",
-        "precio": 999,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 8,
-        "marca": "Samsung",
-        "modelo": "Galaxy Book Pro",
-        "procesador": "Intel Core i7",
-        "ram": "16GB",
-        "almacenamiento": "512GB SSD",
-        "precio": 1399,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 9,
-        "marca": "MSI",
-        "modelo": "GS66 Stealth",
-        "procesador": "Intel Core i9",
-        "ram": "64GB",
-        "almacenamiento": "2TB SSD",
-        "precio": 1999,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      },
-      {
-        "id": 10,
-        "marca": "Razer",
-        "modelo": "Blade 15",
-        "procesador": "Intel Core i7",
-        "ram": "16GB",
-        "almacenamiento": "512GB SSD",
-        "precio": 1699,
-        "imagen": "https://dummyimage.com/200x200/cccccc/000000"
-      }
+  {
+    "id": 1,
+    "title": "PC Gamer",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 999.99,
+    "description": "Potente PC diseñado para gaming",
+    "stock": 7
+  },
+  {
+    "id": 2,
+    "title": "PC de Oficina",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 599.99,
+    "description": "Rendimiento confiable para el trabajo diario",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "title": "PC Todo en Uno",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 799.99,
+    "description": "Diseño elegante y funcionalidad en un solo equipo",
+    "stock": 5
+  },
+  {
+    "id": 4,
+    "title": "PC Mini",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 399.99,
+    "description": "Pequeño en tamaño, grande en rendimiento",
+    "stock": 8
+  },
+  {
+    "id": 5,
+    "title": "PC Workstation",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 1499.99,
+    "description": "Potencia extrema para tareas profesionales",
+    "stock": 3
+  },
+  {
+    "id": 6,
+    "title": "PC de Entretenimiento",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 799.99,
+    "description": "Disfruta de películas y contenido multimedia",
+    "stock": 6
+  },
+  {
+    "id": 7,
+    "title": "PC de Diseño Gráfico",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 1299.99,
+    "description": "Rendimiento y precisión para diseñadores",
+    "stock": 4
+  },
+  {
+    "id": 8,
+    "title": "PC para el Hogar",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 499.99,
+    "description": "Ideal para tareas básicas y navegación web",
+    "stock": 9
+  },
+  {
+    "id": 9,
+    "title": "PC Silenciosa",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 899.99,
+    "description": "Funcionamiento silencioso sin sacrificar rendimiento",
+    "stock": 2
+  },
+  {
+    "id": 10,
+    "title": "PC Todo Terreno",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Productos_armados",
+    "cost": 699.99,
+    "description": "Adaptable a diversas tareas y necesidades",
+    "stock": 7
+  },
+  {
+    "id": 11,
+    "title": "Notebook Ultrabook",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 799.99,
+    "description": "Portátil ligero y potente para trabajo y entretenimiento",
+    "stock": 10
+  },
+  {
+    "id": 12,
+    "title": "Notebook Convertible",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 899.99,
+    "description": "Flexibilidad y versatilidad en un solo dispositivo",
+    "stock": 5
+  },
+  {
+    "id": 13,
+    "title": "Notebook Gaming",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 1099.99,
+    "description": "Rendimiento excepcional para los jugadores",
+    "stock": 8
+  },
+  {
+    "id": 14,
+    "title": "Notebook Estudiante",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 599.99,
+    "description": "Perfecto para estudiantes y tareas educativas",
+    "stock": 7
+  },
+  {
+    "id": 15,
+    "title": "Notebook de Diseño",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 1199.99,
+    "description": "Herramientas potentes para profesionales creativos",
+    "stock": 6
+  },
+  {
+    "id": 16,
+    "title": "Notebook Elegante",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 699.99,
+    "description": "Diseño elegante y rendimiento confiable",
+    "stock": 9
+  },
+  {
+    "id": 17,
+    "title": "Notebook Empresarial",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 999.99,
+    "description": "Productividad y seguridad para entornos empresariales",
+    "stock": 4
+  },
+  {
+    "id": 18,
+    "title": "Notebook Ligero",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 549.99,
+    "description": "Portabilidad y rendimiento en un solo paquete",
+    "stock": 7
+  },
+  {
+    "id": 19,
+    "title": "Notebook Todo Terreno",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 749.99,
+    "description": "Resistente y confiable para condiciones extremas",
+    "stock": 3
+  },
+  {
+    "id": 20,
+    "title": "Notebook Multitarea",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Notebooks",
+    "cost": 899.99,
+    "description": "Rendimiento para manejar múltiples tareas",
+    "stock": 6
+  },
+  {
+    "id": 21,
+    "title": "Consola de Última Generación",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 499.99,
+    "description": "Experimenta los mejores juegos con la última tecnología",
+    "stock": 4
+  },
+  {
+    "id": 22,
+    "title": "Consola Portátil",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 299.99,
+    "description": "Lleva la diversión contigo donde quiera que vayas",
+    "stock": 6
+  },
+  {
+    "id": 23,
+    "title": "Consola Retro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 199.99,
+    "description": "Revive los clásicos de antaño con esta consola retro",
+    "stock": 3
+  },
+  {
+    "id": 24,
+    "title": "Consola de Realidad Virtual",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 799.99,
+    "description": "Sumérgete en mundos virtuales con esta consola VR",
+    "stock": 2
+  },
+  {
+    "id": 25,
+    "title": "Consola Familiar",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 349.99,
+    "description": "Diversión para toda la familia con esta consola",
+    "stock": 8
+  },
+  {
+    "id": 26,
+    "title": "Consola Compacta",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 249.99,
+    "description": "Rendimiento en un tamaño compacto",
+    "stock": 5
+  },
+  {
+    "id": 27,
+    "title": "Consola Potente",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 599.99,
+    "description": "Potencia para los juegos más exigentes",
+    "stock": 7
+  },
+  {
+    "id": 28,
+    "title": "Consola Retro Moderna",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 249.99,
+    "description": "El encanto retro con características modernas",
+    "stock": 4
+  },
+  {
+    "id": 29,
+    "title": "Consola Portátil Avanzada",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 399.99,
+    "description": "Juegos impresionantes en una consola portátil",
+    "stock": 6
+  },
+  {
+    "id": 30,
+    "title": "Consola Todo en Uno",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Consolas",
+    "cost": 699.99,
+    "description": "Diversión completa en un solo sistema",
+    "stock": 3
+  },
+  {
+    "id": 31,
+    "title": "Monitor Curvo 27\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 249.99,
+    "description": "Sumérgete en tus contenidos con este monitor curvo",
+    "stock": 6  
+  },
+  {
+    "id": 32,
+    "title": "Monitor Ultrawide 34\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 449.99,
+    "description": "Amplia tu espacio de trabajo con este monitor ultrapanorámico",
+    "stock": 8
+  },
+  {
+    "id": 33,
+    "title": "Monitor Gaming 144Hz",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 329.99,
+    "description": "Experiencia de juego fluida y envolvente",
+    "stock": 5
+  },
+  {
+    "id": 34,
+    "title": "Monitor Profesional 4K",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 599.99,
+    "description": "Precisión y calidad para tareas profesionales",
+    "stock": 7
+  },
+  {
+    "id": 35,
+    "title": "Monitor Portátil 15\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 199.99,
+    "description": "Trabaja en cualquier lugar con este monitor portátil",
+    "stock": 4
+  },
+  {
+    "id": 36,
+    "title": "Monitor HDR 32\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 549.99,
+    "description": "Colores vibrantes y contraste impresionante con HDR",
+    "stock": 3
+  },
+  {
+    "id": 37,
+    "title": "Monitor Ajustable 24\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 179.99,
+    "description": "Personaliza tu posición con un soporte ajustable",
+    "stock": 9
+  },
+  {
+    "id": 38,
+    "title": "Monitor Curvo Ultrawide 38\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 799.99,
+    "description": "Curvatura y amplitud en un monitor impresionante",
+    "stock": 2
+  },
+  {
+    "id": 39,
+    "title": "Monitor Táctil 22\"",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 289.99,
+    "description": "Interactúa con tus aplicaciones con pantalla táctil",
+    "stock": 6
+  },
+  {
+    "id": 40,
+    "title": "Monitor Gaming Ultrarrápido",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Monitores",
+    "cost": 499.99,
+    "description": "Sin desenfoques en las partidas más intensas",
+    "stock": 4
+  },
+  {
+    "id": 41,
+    "title": "Pendrive USB 128GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 19.99,
+    "description": "Lleva tus archivos contigo a donde vayas",
+    "stock": 9
+  },
+  {
+    "id": 42,
+    "title": "Tarjeta de Memoria 64GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 14.99,
+    "description": "Amplía la capacidad de tus dispositivos",
+    "stock": 7
+  },
+  {
+    "id": 43,
+    "title": "Pendrive USB 256GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 29.99,
+    "description": "Almacena más archivos con este pendrive de alta capacidad",
+    "stock": 6
+  },
+  {
+    "id": 44,
+    "title": "Tarjeta Micro SD 128GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 17.99,
+    "description": "Ideal para cámaras y dispositivos móviles",
+    "stock": 8
+  },
+  {
+    "id": 45,
+    "title": "Disco Duro Externo 1TB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 79.99,
+    "description": "Almacena tus datos de forma segura y portátil",
+    "stock": 5
+  },
+  {
+    "id": 46,
+    "title": "Pendrive USB 64GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 12.99,
+    "description": "Capacidad suficiente para tus archivos esenciales",
+    "stock": 10
+  },
+  {
+    "id": 47,
+    "title": "Tarjeta de Memoria 32GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 9.99,
+    "description": "Compacta y versátil para tus necesidades",
+    "stock": 12
+  },
+  {
+    "id": 48,
+    "title": "Pendrive USB 512GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 39.99,
+    "description": "Gran capacidad en un dispositivo portátil",
+    "stock": 4
+  },
+  {
+    "id": 49,
+    "title": "Tarjeta Micro SD 256GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 24.99,
+    "description": "Amplia capacidad para tus dispositivos móviles",
+    "stock": 6
+  },
+  {
+    "id": 50,
+    "title": "Pendrive USB 32GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_629239-MLA50400566924_062022-F.webp",
+    "category": "Pendrives_memorias",
+    "cost": 9.99,
+    "description": "Almacenamiento básico en un pequeño dispositivo",
+    "stock": 15
+  }
 ]
+
   
   

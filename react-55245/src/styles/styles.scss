@@ -1,15 +1,18 @@
 //variables
 @import "./variables/variables";
 //components
+@import "./components/Loader/Loader";
 @import "./components/Title/Title";
 @import "./components/Header/Header";
 @import "./components/NavBar/NavBar";
 @import "./components/Cart/Cart";
 @import "./components/Item/Item";
 @import "./components/ItemList/ItemList";
-@import "./components/ItemCard/ItemCard";
 @import "./components/ItemCount/ItemCount";
 @import "./components/ItemDetail/ItemDetail";
 @import "./components/ItemListContainer/ItemListContainer";
 @import "./components/ItemDetailContainer/ItemDetailContainer";
+@import "./components/Checkout/Checkout";
+@import "./components/Popup/Popup.scss";
+@import "./components/OrderConfirm/OrderConfirm"
 

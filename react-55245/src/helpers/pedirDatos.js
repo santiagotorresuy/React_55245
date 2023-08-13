@@ -5,6 +5,6 @@ export const pedirDatos = () => {
         setTimeout(() => {
             resolve(MOCK_DATA)
        
-        }, 2000)
+        }, 1000)
     })
 }

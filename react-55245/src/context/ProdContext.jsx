@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { query, where, collection, getDocs } from "firebase/firestore";
-import { db } from "../../Firebase/config";
+import { db } from "../Firebase/config";
 
-import { Loader } from "../Loader/Loader";
-import ItemList from "../ItemList/ItemList";
-
-export const ItemListContainer = () =>{
-
+export const ProdContext = createContext()
+ 
+export const ProdProvider = ({children}) =>{
     const [ products, setProducts ] = useState([])
     const [ loading, setLoading ] = useState(true)
 
     const { categoryId } = useParams();
 
-    
     useEffect(() =>{
         setLoading(true)
  
@@ -36,22 +33,16 @@ export const ItemListContainer = () =>{
                 .catch(e => console.log(e))
                 .finally(() => setLoading(false))    
     }, [categoryId])
- 
-    return( 
-        <div className="item__list__container container">
-            <h2 className="mb-4 mt-5 item__list__container__h2">Lista de productos</h2>
-            <hr />
-            {
-                loading
-                    ? <Loader/>
-                    : <ItemList itemList={products}/>
-            }
-            <div className="row justify-content-between mb-5">
-                <button  className="btn btn-primary col-2">Previous</button>
-                <button  className="btn btn-primary col-2 ">Next</button>
-            </div>
-        </div>
+
+    return(
+        <ProdContext.Provider value={{
+            products,
+            setProducts,
+            loading,
+            setLoading,
+            categoryId
+        }}>
+            {children}
+        </ProdContext.Provider>
     )
 }
-
-

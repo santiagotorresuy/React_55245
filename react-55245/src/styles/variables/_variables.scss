@@ -1,6 +1,8 @@
 //COLOR
-$navbarLink--color:  rgb(162, 197, 255);
-$navbarLinkHover--color: rgb(90, 152, 252);
+$navbarLink--skyblue:  rgb(46, 157, 221);
+$navbarLink--orange: rgb(199, 93, 0);
+$boxShadow--default: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+$titleColor: rgba(134, 125, 125, 0.867);
 
 //SIZE
 $mW-1100: 1100px;
@@ -8,3 +10,4 @@ $mW-1100: 1100px;
 //ANIMATIONS
 $transformScale: scale(1.1, 1.1);
 $transitionDuration: 0.2s;
+ 

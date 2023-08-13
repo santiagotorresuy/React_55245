@@ -10,7 +10,7 @@
     }
 
     &__cart{
-        background-color: $navbarLink--color;
+        background-color: $navbarLink--skyblue;
         border: none;
         border-radius: 10px;
         max-width: fit-content;
@@ -22,7 +22,7 @@
     }
 
     &__cart:hover{
-        background-color: $navbarLinkHover--color;
+        background-color: $navbarLink--orange;
         transform: $transformScale;
     }
 }

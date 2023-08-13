@@ -13,6 +13,10 @@
         align-self: center;
         max-width: $mW-1100;
 
+        &__img{
+            max-width: 100px;
+        }
+
         &__remove{
             border: none;
             background-color: white;
@@ -29,7 +33,7 @@
         &-buy{
             border: none;
             color: white;
-            background-color: $navbarLink--color;
+            background-color: $navbarLink--skyblue;
             border-radius: 5px;
             padding: 5px;
         }    
@@ -37,7 +41,7 @@
         &-delete{
             border: none;
             color: white;
-            background-color: $navbarLink--color;
+            background-color: $navbarLink--skyblue;
             border-radius: 5px;
             padding: 5px;
         }          

@@ -1,5 +1,10 @@
 .item__list__container{
     display: flex;
     flex-direction: column;
-    max-width: $mW-1100;
+    max-width: fit-content;
+
+    &__h2{
+        width: $mW-1100;
+        color: $titleColor;
+    }
 }

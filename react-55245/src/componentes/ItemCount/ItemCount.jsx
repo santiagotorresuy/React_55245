@@ -1,41 +1,24 @@
 import { useContext } from "react"
-import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
+import { Loader } from "../Loader/Loader"
 
 
-const ItemCount = ({ quantity, item, setQuantity }) =>{
-    const { addCart, isInCart, setCartIndicator } = useContext(CartContext)
-
-
-    const handleAdd = () =>{
-        quantity < 20 && setQuantity(prevQuantity => prevQuantity + 1)
-    }
-
-    const handleSubstract = () =>{
-        quantity > 1 && setQuantity(prevQuantity => prevQuantity - 1)
-    }    
-
-    const handleAddCart = () =>{
-        const newItem = {
-            ...item,
-            quantity
-        }
-
-        addCart(newItem)
-        setCartIndicator("header__cart__indicator--on")
-    }
-
+const ItemCount = ({ item, quantity, handleAdd, handleSubstract, handleAddCart }) =>{
+    const { isInCart } = useContext(CartContext)
+ 
     return(
-        <div className="item__count">
+        <div className="item__count"> 
             <div className="item__count__quantity">
                 <button onClick={handleSubstract} className="btn btn-primary">-</button>
                 <span className="ps-2 pe-2">{quantity}</span>
                 <button onClick={handleAdd} className="btn btn-primary">+</button>
+
             </div>
             {
-                isInCart(item.id)
-                    ? <Link className="item__count__cart" to="/cart">Terminar mi compra</Link>
-                    : <button onClick={handleAddCart} type="button" className="item__count__cart">Agregar al carrito</button>
+                !isInCart(item.id)
+                    ? <button onClick={handleAddCart} type="button" className="item__count__cart">Agregar al carrito</button>
+                    : <Link onClick={handleAddCart} className="item__count__cart" to="/cart">Terminar mi compra</Link>
             }
         </div>
     )

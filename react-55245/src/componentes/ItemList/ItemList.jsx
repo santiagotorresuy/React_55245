@@ -1,15 +1,15 @@
-import { ItemCard } from "../ItemCard/ItemCard"
+import { Item } from "../Item/Item"
 
 
 const ItemList = ({itemList}) =>{
-    return(
-        <div className="item__list">
-                    {
-                       itemList && itemList.map((item) => (<ItemCard key={item.name} url={item.url}/>))
-                    }
-        </div>
 
+    return(
+        <div className="item__list">          
+                    {
+                        itemList && itemList.map((item) => <Item key={item.id} item={item}/>)
+                    }
+        </div>  
     )
 }
-
 export default ItemList
+

@@ -1,0 +1,17 @@
+.order{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+
+
+    &__container{
+        width: fit-content;
+
+        &__h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: $titleColor;
+        }
+    }
+}
