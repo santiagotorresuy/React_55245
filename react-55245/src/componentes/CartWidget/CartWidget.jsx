@@ -1,14 +1,28 @@
+import { useState } from "react"
 import {Link} from "react-router-dom"
 
 export const CartWidget = ({ cart, removeItem, emptyCart, totalPrice }) =>{
+    const [ popup, setPopup ] = useState("d-none")
+
+    const handlePopup = () =>{
+        setPopup("popup")
+    }
 
     return(
         <div className="cart mt-5"> 
+
+            <div className={popup}>
+                <div className="popup__container">
+                    <h2 className="popup__container__h2">Desea vaciar el carrito?</h2>
+                    <button className="popup__container__btn btn btn-danger" onClick={emptyCart}>Aceptar</button>
+                </div>
+            </div>
+
             <div className="cart__h2">
-                <h2 className="mb-4 align-self-start">Tu compra</h2>  
+                <h2 className="mb-4 text-secondary align-self-start">Tu compra</h2>  
             </div>
             <table className="table cart__table">
-                <thead>
+                <thead> 
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Producto</th>
@@ -19,7 +33,7 @@ export const CartWidget = ({ cart, removeItem, emptyCart, totalPrice }) =>{
                     </tr>
                 </thead>
                 <tbody>
-                {
+                { 
                     cart.map((item) =>{
                         return(
                             <tr key={item.id}>
@@ -49,9 +63,8 @@ export const CartWidget = ({ cart, removeItem, emptyCart, totalPrice }) =>{
                 </tbody>
             </table>  
             <div className="cart__buyDelete">
-                <button onClick={emptyCart} className="cart__buyDelete-delete">Descartar</button>
+                <button onClick={handlePopup} className="btn btn-danger">Descartar</button>
                 <Link className="btn btn-success mx-2" to="/checkout">Terminar mi compra</Link>
-                {/* <button onClick={buyItems} className="cart__buyDelete-buy">Comprar</button> */}
             </div>
         </div>
     )

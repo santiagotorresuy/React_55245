@@ -29,22 +29,6 @@
         align-self: center;
         margin-bottom: 15px;
         width: $mW-1100;
-
-        &-buy{
-            border: none;
-            color: white;
-            background-color: $navbarLink--skyblue;
-            border-radius: 5px;
-            padding: 5px;
-        }    
-        
-        &-delete{
-            border: none;
-            color: white;
-            background-color: $navbarLink--skyblue;
-            border-radius: 5px;
-            padding: 5px;
-        }          
     }
 
 }

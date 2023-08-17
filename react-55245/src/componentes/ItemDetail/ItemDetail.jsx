@@ -44,7 +44,7 @@ export const ItemDetail = ({item}) =>{
     //CODIGO
     return(
         <div className="item__detail">
-            {   
+            {    
                 item && 
                     <>
                         <img className="item__detail__img" src={item.image} alt={item.title}/>    

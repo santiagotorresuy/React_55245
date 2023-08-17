@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
-import { Loader } from "../Loader/Loader"
 
 
 const ItemCount = ({ item, quantity, handleAdd, handleSubstract, handleAddCart }) =>{
@@ -9,10 +8,10 @@ const ItemCount = ({ item, quantity, handleAdd, handleSubstract, handleAddCart }
  
     return(
         <div className="item__count"> 
-            <div className="item__count__quantity">
-                <button onClick={handleSubstract} className="btn btn-primary">-</button>
+            <div className="item__count__quantity"> 
+                <button onClick={handleSubstract} className="item__count__quantity__btn">-</button>
                 <span className="ps-2 pe-2">{quantity}</span>
-                <button onClick={handleAdd} className="btn btn-primary">+</button>
+                <button onClick={handleAdd} className="item__count__quantity__btn">+</button>
 
             </div>
             {

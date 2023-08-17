@@ -11,7 +11,6 @@ import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetai
 import { CartProvider } from "./context/CartContext";
 import { CartView } from "./componentes/CartView/CartView";
 import { Checkout } from "./componentes/Checkout/Checkout";
-import { Popup } from "./componentes/Popup/Popup";
 
 function App() {
   
@@ -27,7 +26,6 @@ function App() {
               <Route path="/category/:categoryId" element= { <ItemListContainer/> }/>
               <Route path="/cart" element= { <CartView/> }/>
               <Route path="/checkout" element= { <Checkout/> }/>
-              <Route path="/popup" element= { <Popup/> }/>
             </Routes>
         </BrowserRouter>
       </CartProvider>

@@ -17,15 +17,16 @@ export const CartProvider = ({children}) =>{
 
     const removeItem = (id) =>{
       setCart( cart.filter((item) => item.id !== id))
+      setCartIndicator("d-none")
     }
 
     const emptyCart = () =>{
-      setCart([]) 
+      setCart([])
+      setCartIndicator("d-none")
     }
 
     const buyItems = () =>{
       setCart([])
-      console.log("Compra realizada con exito")
     }
 
     const totalPrice = () =>{

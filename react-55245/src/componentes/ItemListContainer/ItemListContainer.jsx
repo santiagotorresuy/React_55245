@@ -11,9 +11,18 @@ export const ItemListContainer = () =>{
 
     const [ products, setProducts ] = useState([])
     const [ loading, setLoading ] = useState(true)
+    const [ pagination, setPagination] = useState(10)
 
     const { categoryId } = useParams();
 
+    const handleNext = () =>{
+        pagination < 40 && setPagination(prev => prev + 10)
+    }
+
+    const handlePrevious = () =>{
+        pagination > 10 && setPagination(prev => prev - 10)
+
+    }
     
     useEffect(() =>{
         setLoading(true)
@@ -31,24 +40,26 @@ export const ItemListContainer = () =>{
                             ...doc.data()
                         }
                     })
-                    setProducts(docs)
+
+                    const sliceProds = docs.slice(pagination, pagination + 10)
+
+                    setProducts(categoryId ? docs : sliceProds)
                 })
                 .catch(e => console.log(e))
                 .finally(() => setLoading(false))    
-    }, [categoryId])
+    }, [categoryId, pagination])
  
-    return( 
+    return(  
         <div className="item__list__container container">
             <h2 className="mb-4 mt-5 item__list__container__h2">Lista de productos</h2>
-            <hr />
             {
                 loading
                     ? <Loader/>
                     : <ItemList itemList={products}/>
             }
-            <div className="row justify-content-between mb-5">
-                <button  className="btn btn-primary col-2">Previous</button>
-                <button  className="btn btn-primary col-2 ">Next</button>
+            <div className= "item__list__container__btns">
+                <button onClick={handlePrevious} className="item__list__container__btn">Atras</button>
+                <button onClick={handleNext} className="item__list__container__btn">Siguiente</button>
             </div>
         </div>
     )

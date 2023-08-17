@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react"
-import { useContext, useRef } from "react"
-import { Navigate } from "react-router-dom"
+import { useState } from "react"
+import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
-import { collection, addDoc, writeBatch, where, documentId, getDocs, query } from "firebase/firestore"
+import { collection, addDoc } from "firebase/firestore"
 import { db } from "../../Firebase/config"
 import { OrderConfirm } from "../OrderConfirm/OrderConfirm"
-
 
 export const Checkout = () =>{
     const { cart, totalPrice, emptyCart, setCartIndicator } = useContext(CartContext)
     const [ orderId, setOrderId ] = useState(null)
     const [ orderTotal, setOrderTotal ] = useState(0)
-
 
     const [values, setValues] = useState({
         nombre: "",
@@ -28,7 +25,12 @@ export const Checkout = () =>{
 
     const handleSubmit = async (e) =>{
         e.preventDefault()
-        
+
+        if(!values.nombre || !values.email || !values.celular){
+            alert("Hay campos sin llenar!")
+            return; 
+        }
+
         const ordersRef = collection(db, "orders")
 
         const order = {
@@ -72,14 +74,12 @@ export const Checkout = () =>{
         //     console.log(outOfStock)
         // }
 
-        addDoc(ordersRef, order)
-            .then((doc) =>{
-                console.log(doc.id)
-                emptyCart() 
-                setOrderId(doc.id)
-                setOrderTotal(order.total)
-                // navigate(`/orders/${doc.id}`)
-            })
+        await addDoc(ordersRef, order)
+                .then((doc) =>{
+                    emptyCart() 
+                    setOrderId(doc.id)
+                    setOrderTotal(order.total)
+                })
 
         setCartIndicator("d-none")
     }
@@ -91,10 +91,6 @@ export const Checkout = () =>{
                 orderTotal={orderTotal}
             />
         )
-    }
-
-    if(cart.length === 0){
-        return <Navigate to="/popup" />
     }
 
     return(

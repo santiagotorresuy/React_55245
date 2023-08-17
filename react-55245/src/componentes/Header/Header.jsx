@@ -35,6 +35,6 @@ export const Header = () =>{
                 <img src="/cart.png" alt="" className="header__cart__img"/>
                 <p className={cartIndicator}>{indicatorNumber}</p> 
             </Link>
-        </header>
+        </header> 
     )
 }
